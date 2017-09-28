@@ -4,7 +4,7 @@ const s3 = require('./controllers/s3');
 exports.handler = (event, context) => {
 
 const srcBucket = `${event.Records[0].s3.bucket.name}`;
-const dstBucket = `${event.Records[0].s3.bucket.name}-resize`
+const dstBucket = `${srcBucket}-resize`
 
 const key = event.Records[0].s3.object.key;
 
